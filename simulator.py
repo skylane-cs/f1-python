@@ -1,28 +1,28 @@
 import random, time
 
 tracks = {
-    "Bahrain": {"Circuit": "Bahrain International Circuit", "LAPS": 57, 'POLE': 90.558, "RAIN": 0},
-    "Jeddah": {"Circuit": "Jeddah Street Circuit", "LAPS": 50, 'POLE': 88.2, "RAIN": 0},
-    "Melbourne": {"Circuit": "Albert Park Circuit", "LAPS": 58, 'POLE': 77.868, "RAIN": 20},
-    "Imola": {"Circuit": "Autodromo Enzo e Dino Ferrari", "LAPS": 63, 'POLE': 87.999, "RAIN": 30},
-    "Miami": {"Circuit": "Miami International Autodrome", "LAPS": 57, 'POLE': 88.796, "RAIN": 15},
-    "Barcelona": {"Circuit": "Circuit de Barcelona-Catalunya", "LAPS": 66, 'POLE': 79.750, "RAIN": 15},
-    "Monaco": {"Circuit": "Circuit de Monaco", "LAPS": 78, 'POLE': 71.376, "RAIN": 60},
-    "Baku": {"Circuit": "Baku City Circuit", "LAPS": 51, 'POLE': 101.359, "RAIN": 20},
-    "Montreal": {"Circuit": "Circuit Gilles Villeneuve", "LAPS": 70, 'POLE': 81.299, "RAIN": 50},
-    "Silverstone": {"Circuit": "Silverstone Circuit", "LAPS": 52, 'POLE': 100.983, "RAIN": 40},
-    "Austria": {"Circuit": "Red Bull Ring", "LAPS": 71, 'POLE': 64.984, "RAIN": 30},
-    "Paul Ricard": {"Circuit": "Circuit Paul Ricard", "LAPS": 53, 'POLE': 90.872, "RAIN": 20},
-    "Budapest": {"Circuit": "Hungaroring", "LAPS": 70, 'POLE': 77.377, "RAIN": 55},
-    "Belgium": {"Circuit": "Circuit de Spa-Francorchamps", "LAPS": 44, 'POLE': 103.665, "RAIN": 50},
-    "Zandvoort": {"Circuit": "Circuit Zandvoort", "LAPS": 72, 'POLE': 70.342, "RAIN": 20},
-    "Monza": {"Circuit": "Autodromo Nazionale di Monza", "LAPS": 53, 'POLE': 80.161, "RAIN": 20},
-    "Singapore": {"Circuit": "Marina Bay Street Circuit", "LAPS": 61, 'POLE': 109.412, "RAIN": 75},
-    "Suzuka": {"Circuit": "Suzuka Intl. Racing Course", "LAPS": 53, 'POLE': 89.304, "RAIN": 40},
-    "Austin": {"Circuit": "Circuit of The Americas", "LAPS": 56, 'POLE': 94.356, "RAIN": 15},
-    "Mexico": {"Circuit": "Autodromo Hermanos Rodriguez", "LAPS": 71, 'POLE': 77.775, "RAIN": 20},
-    "Brazil": {"Circuit": "Autodromo Jose Carlos Pace", "LAPS": 71, 'POLE': 71.674, "RAIN": 85},
-    "Abu Dhabi": {"Circuit": "Yas Marina Circuit", "LAPS": 55, 'POLE': 83.8241, "RAIN": 0},
+    "Bahrain": {"CIRC": "Bahrain International Circuit", "LAPS": 57, 'POLE': 90.558, "RAIN": 0},
+    "Jeddah": {"CIRC": "Jeddah Street Circuit", "LAPS": 50, 'POLE': 88.2, "RAIN": 0},
+    "Melbourne": {"CIRC": "Albert Park Circuit", "LAPS": 58, 'POLE': 77.868, "RAIN": 20},
+    "Imola": {"CIRC": "Autodromo Enzo e Dino Ferrari", "LAPS": 63, 'POLE': 87.999, "RAIN": 30},
+    "Miami": {"CIRC": "Miami International Autodrome", "LAPS": 57, 'POLE': 88.796, "RAIN": 15},
+    "Barcelona": {"CIRC": "Circuit de Barcelona-Catalunya", "LAPS": 66, 'POLE': 79.750, "RAIN": 15},
+    "Monaco": {"CIRC": "Circuit de Monaco", "LAPS": 78, 'POLE': 71.376, "RAIN": 60},
+    "Baku": {"CIRC": "Baku City Circuit", "LAPS": 51, 'POLE': 101.359, "RAIN": 20},
+    "Montreal": {"CIRC": "Circuit Gilles Villeneuve", "LAPS": 70, 'POLE': 81.299, "RAIN": 50},
+    "Silverstone": {"CIRC": "Silverstone Circuit", "LAPS": 52, 'POLE': 100.983, "RAIN": 40},
+    "Austria": {"CIRC": "Red Bull Ring", "LAPS": 71, 'POLE': 64.984, "RAIN": 30},
+    "Paul Ricard": {"CIRC": "Circuit Paul Ricard", "LAPS": 53, 'POLE': 90.872, "RAIN": 20},
+    "Budapest": {"CIRC": "Hungaroring", "LAPS": 70, 'POLE': 77.377, "RAIN": 55},
+    "Belgium": {"CIRC": "Circuit de Spa-Francorchamps", "LAPS": 44, 'POLE': 103.665, "RAIN": 50},
+    "Zandvoort": {"CIRC": "Circuit Zandvoort", "LAPS": 72, 'POLE': 70.342, "RAIN": 20},
+    "Monza": {"CIRC": "Autodromo Nazionale di Monza", "LAPS": 53, 'POLE': 80.161, "RAIN": 20},
+    "Singapore": {"CIRC": "Marina Bay Street Circuit", "LAPS": 61, 'POLE': 109.412, "RAIN": 75},
+    "Suzuka": {"CIRC": "Suzuka Intl. Racing Course", "LAPS": 53, 'POLE': 89.304, "RAIN": 40},
+    "Austin": {"CIRC": "CIRC of The Americas", "LAPS": 56, 'POLE': 94.356, "RAIN": 15},
+    "Mexico": {"CIRC": "Autodromo Hermanos Rodriguez", "LAPS": 71, 'POLE': 77.775, "RAIN": 20},
+    "Brazil": {"CIRC": "Autodromo Jose Carlos Pace", "LAPS": 71, 'POLE': 71.674, "RAIN": 85},
+    "Abu Dhabi": {"CIRC": "Yas Marina Circuit", "LAPS": 55, 'POLE': 83.8241, "RAIN": 0},
 }
 
 drivers = {
@@ -49,16 +49,16 @@ drivers = {
 }
 
 weather = {
-    "Sunny": {"Temperature": 26, "Delta": 1},
-    "Light Cloud": {"Temperature": 22, "Delta": 1.005},
-    "Cloudy": {"Temperature": 16, "Delta": 1.01},
-    "Light Rain": {"Temperature": 15, "Delta": 1.1},
-    "Heavy Rain": {"Temperature": 14, "Delta": 1.15}
+    "Sunny": {"TEMP": 26, "DELT": 1},
+    "Light Cloud": {"TEMP": 22, "DELT": 1.005},
+    "Cloudy": {"TEMP": 16, "DELT": 1.01},
+    "Light Rain": {"TEMP": 15, "DELT": 1.1},
+    "Heavy Rain": {"TEMP": 14, "DELT": 1.15}
 }
 
 for driver, data in drivers.items():
-    drivers[driver]["TIM"] = 0
     drivers[driver]["GRI"] = 0
+    drivers[driver]["TIM"] = 0
     drivers[driver]["TOT"] = 0
     drivers[driver]["DNF"] = False
 
@@ -81,7 +81,7 @@ def simulate_qualifying(drivers):
 
     print("\n------------------------------------\n\nQualifying Information:")
 
-    track = tracks[sel_track]["Circuit"]
+    track = tracks[sel_track]["CIRC"]
     pole = tracks[sel_track]["POLE"]
     rain = tracks[sel_track]["RAIN"]
 
@@ -94,28 +94,28 @@ def simulate_qualifying(drivers):
     else:
         cond = random.choice(["Sunny", "Light Cloud", "Cloudy", "Light Rain", "Heavy Rain"])
 
-    temp = weather[cond]["Temperature"]
-    temp_delta = weather[cond]["Delta"]
+    temp = weather[cond]["TEMP"]
+    temp_delta = weather[cond]["DELT"]
 
-    print(f"\nCircuit: {track}\nWeather: {cond}\nTemp: {temp + random.randint(-3, 3)}°C")
+    print(f"\nCircuit: {track}\nWeather: {cond}\nTemperature: {temp + random.randint(-3, 3)}°C")
 
     for driver, data in drivers.items():
         if cond == "Light Rain" or cond == "Heavy Rain":
             qualifying_time = pole + temp_delta + random.uniform(-0.1, 1.9) + 9.5 - (data["QUA"] / 10)
         elif cond in ["Sunny", "Light Cloud", "Cloudy"]:
             qualifying_time = pole + temp_delta + random.uniform(-0.1, 0.9) + 9.5 - (data["QUA"] / 10)
-        data["Qualifying Time"] = qualifying_time
+        data["TIM"] = qualifying_time
 
-    sorted_drivers_qualifying = sorted(drivers.items(), key=lambda x: x[1]["Qualifying Time"])
+    sorted_grid = sorted(drivers.items(), key=lambda x: x[1]["TIM"])
 
-    for i, (driver, data) in enumerate(sorted_drivers_qualifying):
+    for i, (driver, data) in enumerate(sorted_grid):
         if random.random() < 0.01:
             grid_penalty = random.choice([5, 10, 15, 20])
             drivers[driver]["GRI"] = i + 1 + grid_penalty
             grid_penalties.append((driver, grid_penalty))
         else:
             drivers[driver]["GRI"] = i + 1
-        drivers[driver]["Qualifying Time"] = data["Qualifying Time"]
+        drivers[driver]["TIM"] = data["TIM"]
 
     if grid_penalties:
         print("Grid Penalties: ", end="")
@@ -125,8 +125,6 @@ def simulate_qualifying(drivers):
             else:
                 print(f"\t\t\t    {driver} ({penalty})")
 
-    global sorted_grid
-
     sorted_grid = sorted(drivers.items(), key=lambda x: x[1]["GRI"])
 
     print("\n------------------------------------\n\nStarting Grid:\n")
@@ -135,8 +133,8 @@ def simulate_qualifying(drivers):
     for i in range(0, len(sorted_grid), 2):
         left_driver = sorted_grid[i]
         right_driver = sorted_grid[i + 1] if i + 1 < len(sorted_grid) else None
-        left_time = f"{left_driver[1]['Qualifying Time'] // 60:1.0f}:{left_driver[1]['Qualifying Time'] % 60:06.3f}"
-        right_time = f"{'':>5}{right_driver[1]['Qualifying Time'] // 60:1.0f}:{right_driver[1]['Qualifying Time'] % 60:06.3f}"
+        left_time = f"{left_driver[1]['TIM'] // 60:1.0f}:{left_driver[1]['TIM'] % 60:06.3f}"
+        right_time = f"{'':>5}{right_driver[1]['TIM'] // 60:1.0f}:{right_driver[1]['TIM'] % 60:06.3f}"
 
         print(f"{i + 1:2}. {left_driver[0]:<15s}{i + 2:2}. {right_driver[0]:<2s}")
         print(f"{'':>4}{left_time:14}{right_time}")
@@ -154,9 +152,9 @@ def simulate_race(drivers):
     else:
         cond = random.choice(["Sunny", "Light Cloud", "Cloudy", "Light Rain", "Heavy Rain"])
 
-    track = tracks[sel_track]["Circuit"]
-    temp = weather[cond]["Temperature"] + random.randint(-3, 3)
-    temp_delta = weather[cond]["Delta"]
+    track = tracks[sel_track]["CIRC"]
+    temp = weather[cond]["TEMP"] + random.randint(-3, 3)
+    temp_delta = weather[cond]["DELT"]
     pole = tracks[sel_track]["POLE"]
 
     print(f"\nCircuit: {track}\nWeather: {cond}\nTemperature: {temp}°C\n")
@@ -170,13 +168,14 @@ def simulate_race(drivers):
         for driver in drivers:
 
             if lap <= 10:
-                grid_factor = 1.0 + (drivers[driver]["GRI"] - 1) * 0.01
-                lap_time = (pole * grid_factor + random.uniform(-0.1, 2) + 9.5 - (data["RAC"] / 10)) * temp_delta
-                grid_factor - 0.001
+                grid = 1.0 + (drivers[driver]["GRI"] - 1) * 0.01
+                lap_time = (pole * grid + random.uniform(-0.1, 2) + 9.5 - (data["RAC"] / 10)) * temp_delta
+                grid - 0.001
             else:
-                lap_time = (pole * grid_factor + random.uniform(-0.1, 0.5) + 9.5 - (data["RAC"] / 10)) * temp_delta
+                lap_time = (pole * grid + random.uniform(-0.1, 0.5) + 9.5 - (data["RAC"] / 10)) * temp_delta
 
             leader = min(drivers.items(), key=lambda x: x[1]["TOT"])
+
             if leader[0] != driver:
                 delta_time = drivers[leader[0]]["TOT"] - drivers[driver]["TOT"]
                 if delta_time <= 1:
@@ -184,51 +183,34 @@ def simulate_race(drivers):
 
             drivers[driver]["TOT"] += lap_time
 
-            sorted_drivers = sorted(drivers.items(), key=lambda x: x[1]["TOT"])
+            sorted_race = sorted(drivers.items(), key=lambda x: x[1]["TOT"])
+
 
         lap_leader = min(drivers.items(), key=lambda x: x[1]["TOT"])[0]
-
-        lap_count = f"Lap {lap}"
-
-
 
         print(f"[Lap {lap} / {tracks[sel_track]['LAPS']}] \n {lap_leader} leads")
 
         prev_leader = lap_leader
 
-    sorted_drivers = sorted(drivers.items(), key=lambda x: x[1]["TOT"])
-    leader_lap_time = sorted_drivers[0][1]["TOT"]
+    sorted_race = sorted(drivers.items(), key=lambda x: x[1]["TOT"])
+    leader_lap_time = sorted_race[0][1]["TOT"]
 
     leader_avg_lap = leader_lap_time / lap
-    leader_lap_time = sorted_drivers[0][1]["TOT"]
+    leader_lap_time = sorted_race[0][1]["TOT"]
 
     print()
 
     # Print race results (TEMP)
 
-    for i, driver in enumerate(sorted_drivers):
+    for i in range(0, len(sorted_race), 2):
+        left_driver = sorted_race[i]
+        right_driver = sorted_race[i + 1] if i + 1 < len(sorted_race) else None
 
-        gap = driver[1]["TOT"] - leader_lap_time
-        minutes, seconds = divmod(gap, 60)
-        gap_str = f"+{minutes:1.0f}:{seconds:06.3f}"
+        left_time = f"{left_driver[1]['TOT'] // 60:1.0f}:{left_driver[1]['TOT'] % 60:06.3f}"
+        right_time = f"{'':>5}{right_driver[1]['TOT'] // 60:1.0f}:{right_driver[1]['TOT'] % 60:06.3f}"
 
-        leadgap = driver[1]["TOT"]
-        hours, remaining = divmod(leadgap, 3600)
-        minutes, seconds = divmod(remaining, 60)
-        lead = f"{hours:2.0f}:{minutes:02.0f}:{seconds:06.3f}"
-
-        if gap == 0:
-            print(f"{i + 1:2d}. {driver[0]:<6s}{lead:<8s}")
-        elif leader_avg_lap < gap:
-            print(f"{i + 1:2d}. {driver[0]:<6s} +1 LAP")
-        elif leader_avg_lap * 2 < gap:
-            print(f"{i + 1:2d}. {driver[0]:<6s} +2 LAPS ")
-        elif driver[1]["DNF"] == True:
-            print(f"{i + 1:2d}. {driver[0]:<6s} no dnf ")
-        else:
-            print(f"{i + 1:2d}. {driver[0]:<6s} {gap_str:<8s}")
-
-    print(cond)
+        print(f"{i + 1:2}. {left_driver[0]:<15s}{i + 2:2}. {right_driver[0]:<2s}")
+        print(f"{'':>4}{left_time:14}{right_time}")
 
 simulate_qualifying(drivers)
 simulate_race(drivers)
